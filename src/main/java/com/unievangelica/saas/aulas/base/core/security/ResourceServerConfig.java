@@ -13,7 +13,7 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.authorizeRequests().antMatchers("/jogadores").permitAll().anyRequest().authenticated().and().httpBasic();
+    http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
   }
 
   @Override
